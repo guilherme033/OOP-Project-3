@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class EventInsertDTO {
+    private String name;
     private String emailcontact;
     private String description;
     private String place;
@@ -54,6 +55,12 @@ public class EventInsertDTO {
     }
     public void setEndtime(LocalTime endtime) {
         this.endtime = endtime;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
 
