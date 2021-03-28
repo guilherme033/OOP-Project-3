@@ -2,7 +2,6 @@ package facens.poo2.ac1.ac1system.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,13 +20,9 @@ public class Event implements Serializable {
     private Long id;
     
     private String name;
-    private String emailcontact;
     private String description;
     private String place;
     private LocalDate startdate;
-    private LocalDate enddate;
-    private LocalTime starttime;
-    private LocalTime endtime;
 
     Event(){
 
@@ -36,13 +31,10 @@ public class Event implements Serializable {
     public Event(EventInsertDTO dto) {
         
         this.name         = dto.getName();
-        this.emailcontact = dto.getEmailcontact();
         this.description  = dto.getDescription();
         this.place        = dto.getPlace();
         this.startdate    = dto.getStartdate();
-        this.enddate      = dto.getEnddate();
-        this.starttime    = dto.getStarttime();
-        this.endtime      = dto.getEndtime();
+       
 	}
     
 
@@ -58,12 +50,7 @@ public class Event implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public String getEmailcontact() {
-        return emailcontact;
-    }
-    public void setEmailcontact(String emailcontact) {
-        this.emailcontact = emailcontact;
-    }
+    
     public String getDescription() {
         return description;
     }
@@ -81,24 +68,6 @@ public class Event implements Serializable {
     }
     public void setStartdate(LocalDate startdate) {
         this.startdate = startdate;
-    }
-    public LocalDate getEnddate() {
-        return enddate;
-    }
-    public void setEnddate(LocalDate enddate) {
-        this.enddate = enddate;
-    }
-    public LocalTime getStarttime() {
-        return starttime;
-    }
-    public void setStarttime(LocalTime starttime) {
-        this.starttime = starttime;
-    }
-    public LocalTime getEndtime() {
-        return endtime;
-    }
-    public void setEndtime(LocalTime endtime) {
-        this.endtime = endtime;
     }
     
     @Override
